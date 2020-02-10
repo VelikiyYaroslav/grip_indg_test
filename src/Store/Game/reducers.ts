@@ -13,11 +13,13 @@ import {
     BoardCellCoords,
     MAX_USERS,
     GameStatus,
+    MIN_BOARD_SIZE,
+    MAX_BOARD_SIZE,
 } from "./types";
 
 const initialState: GameState = {
     gameStatus: GAME_STATUS_SELECT_BOARD_SIZE,
-    boardState: createInitialBoardState(2),
+    boardState: createInitialBoardState(MIN_BOARD_SIZE),
     currentUser: 0,
 }
 
@@ -52,7 +54,7 @@ function selectBoardSize(state: GameState, action: SelectBoardSizeAction): GameS
 }
 
 function isBoardSizeAvailable(size: number): boolean {
-    return size >= 2 && size <= 8;
+    return size >= MIN_BOARD_SIZE && size <= MAX_BOARD_SIZE;
 }
 
 function createInitialBoardState(boardSize: number): BoardState {

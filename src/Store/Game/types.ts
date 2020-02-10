@@ -2,6 +2,9 @@ export const BOARD_CELL_STATUS_FREE = "free";
 export type BoardCellStatus = typeof BOARD_CELL_STATUS_FREE | number;
 export const MAX_USERS = 2;
 
+
+export const MIN_BOARD_SIZE = 2;
+export const MAX_BOARD_SIZE = 8;
 export type BoardState = Array<Array<BoardCellStatus>>;
 
 export const GAME_STATUS_SELECT_BOARD_SIZE = "GameStatus_SelectBoardSize";
