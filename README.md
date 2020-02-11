@@ -1,8 +1,8 @@
 # The SQUARES game (test task)
 
-This is a test task for INDG. The descriptions of task in this [file](./Programming_case_Grip.docx).
+This is a test task for INDG. The descriptions of task in the file [Programming_case_Grip.docx](./Programming_case_Grip.docx).
 
-The answers of the task's question is in the second part of this task - [here](#2-question-answers).
+The answers of the task's question is in the [part 2](#2-questions-answers).
 
 ## 1. Using
 
