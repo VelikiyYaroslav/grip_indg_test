@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
 import { MIN_BOARD_SIZE, MAX_BOARD_SIZE } from "../../Store/Game/types";
 import { selectBoardSize } from "../../Store/Game/actions";
+import styles from "./index.module.scss";
 
 export function GameSelectBoardSize() {
 
@@ -17,6 +18,7 @@ export function GameSelectBoardSize() {
         <form onSubmit={onSelectBoardSize}>
             <div>
                 <label>
+                    <p>Select game-board size: </p>
                     <input
                         type="number"
                         min={MIN_BOARD_SIZE}
@@ -24,11 +26,11 @@ export function GameSelectBoardSize() {
                         value={size}
                         onChange={onChangeSize}
                         autoFocus
+                        className={styles.BoardSizeInput}
                     />
-                    <span>Select game-board size (2..8).</span>
                 </label>
             </div>
-            <button type="submit">GO!</button>
+            <button type="submit" className={styles.StartGame}>Start game!</button>
         </form>
     )
 }
