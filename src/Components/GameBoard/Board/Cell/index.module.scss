@@ -1,16 +1,18 @@
+@import '../../../../styles-shared.scss';
+
 .Cell {
     border: solid 1px #000;
-    min-width: 100px;
-    min-height: 100px;
+    // min-width: 100px;
+    // min-height: 100px;
 
 
     &-free {
         background: #808080;
     }
     &-user1 {
-        background: #00FF00;
+        background: $player1-color;
     }
     &-user2 {
-        background: #FF0000;
+        background: $player2-color;
     }
 }

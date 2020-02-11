@@ -1,0 +1,21 @@
+.App {
+    display: grid;
+    grid-template-rows: 40px 80vh 40px;
+    height: 90vh;
+
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+}

@@ -20,7 +20,10 @@ export function Board() {
     return (
         <div
             className={styles.Board}
-            style={{ gridTemplateColumns: `repeat(${boardSize}, 1fr)` }}
+            style={{
+                gridTemplateColumns: `repeat(${boardSize}, 1fr)`,
+                gridTemplateRows: `repeat(${boardSize}, 1fr)`,
+            }}
         >
             {board.map((row, rowIndex) => {
                 return row.map((cell, cellIndex) => (

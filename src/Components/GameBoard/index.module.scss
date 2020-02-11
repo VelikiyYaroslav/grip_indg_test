@@ -1,0 +1,30 @@
+.GameBoard {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    display: grid;
+    grid-template-areas:
+        "u u u u u s s s"
+        "b b b b b b b b"
+        "b b b b b b b b"
+        "b b b b b b b b"
+        "b b b b b b b b"
+        "b b b b b b b b"
+        "b b b b b b b b"
+        "b b b b b b b b"
+        "b b b b b b b b"
+    ;
+
+    .CurrentPlayer {
+        grid-area: u;
+    }
+    .GameScore {
+        grid-area: s;
+    }
+    .Board {
+        grid-area: b;
+    }
+}

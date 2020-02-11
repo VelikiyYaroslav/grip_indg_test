@@ -1,0 +1,10 @@
+@import '../../styles-shared.scss';
+
+.winner-player- {
+    &1 {
+        color: $player1-color;
+    }
+    &2 {
+        color: $player2-color;
+    }
+}

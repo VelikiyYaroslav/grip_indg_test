@@ -23,6 +23,7 @@ export function GameSelectBoardSize() {
                         max={MAX_BOARD_SIZE}
                         value={size}
                         onChange={onChangeSize}
+                        autoFocus
                     />
                     <span>Select game-board size (2..8).</span>
                 </label>
