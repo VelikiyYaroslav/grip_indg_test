@@ -10,7 +10,7 @@ type Cell = {
 type Board = Array<Array<Cell>>;
 
 export type GameScore = {
-    users: number[],
+    users: number[][],
     free: number,
 }
 
@@ -54,32 +54,27 @@ function BFS(board: Board): GameScore {
         }
 
         const currentUser: UserType = getCellByCoords(board, nextNotVisitedCell).markedByUser;
-        if (
-            (currentUser !== BOARD_CELL_STATUS_FREE)
-            && (typeof score.users[currentUser] !== "number")
-        ) {
-            score.users[currentUser] = 0;
-        }
-
 
         markCellAsVisited(board, nextNotVisitedCell);
         queue.push(nextNotVisitedCell);
 
+        let currentUsersGroupSize = 0;
         // iterate in user's group
         while (queue.length) {
             const currentCellCoords: CellCoords = queue.pop() as CellCoords;
-
-
-            // increase users score;
-            if (currentUser !== BOARD_CELL_STATUS_FREE) {
-                score.users[currentUser]++
-            }
-
+            currentUsersGroupSize++;
 
             const directlyConnectedByUser: CellCoords[] =
                 getAllNotVisitedDirectlyConnectedByUser(board, currentCellCoords, currentUser);
             directlyConnectedByUser.forEach(cell => markCellAsVisited(board, cell));
             queue.push(...directlyConnectedByUser);
+        }
+
+        if (currentUser !== BOARD_CELL_STATUS_FREE) {
+            if (!score.users[currentUser]) {
+                score.users[currentUser] = [];
+            }
+            score.users[currentUser].push(currentUsersGroupSize);
         }
 
 
