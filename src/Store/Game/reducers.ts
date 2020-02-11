@@ -58,7 +58,9 @@ function isBoardSizeAvailable(size: number): boolean {
 }
 
 function createInitialBoardState(boardSize: number): BoardState {
-    return Array(boardSize).map(() => Array(boardSize).map(() => BOARD_CELL_STATUS_FREE));;
+    return Array(boardSize).fill(
+        Array(boardSize).fill(BOARD_CELL_STATUS_FREE)
+    );
 }
 
 function playerSelectCell(state: GameState, action: PlayerSelectCell): GameState {
