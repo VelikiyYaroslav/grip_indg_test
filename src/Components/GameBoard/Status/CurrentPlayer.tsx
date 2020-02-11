@@ -1,6 +1,6 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import selectGameCurrentPlayer from '../../../Selectors/selectGameCurrentPlayer';
+import React from "react";
+import { useSelector } from "react-redux";
+import selectGameCurrentPlayer from "../../../Selectors/selectGameCurrentPlayer";
 import styles from "./CurrentPlayer.module.scss"
 
 export function CurrentPlayer() {

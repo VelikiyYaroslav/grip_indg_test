@@ -76,8 +76,6 @@ function BFS(board: Board): GameScore {
             }
             score.users[currentUser].push(currentUsersGroupSize);
         }
-
-
     }
 
     return score;

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback } from "react";
 import { BoardCellStatus, BOARD_CELL_STATUS_FREE } from "../../../../Store/Game/types";
 import styles from "./index.module.scss";
 
@@ -21,7 +21,7 @@ export function Cell({ cellFill, onUserSelect }: props) {
         className={[styles.Cell, getCellStyle(cellFill)].join(" ")}
         onClick={onCellClick}
         tabIndex={0}
-        // TODO: mb add some aria labels
+    // TODO: mb add some aria labels
     />
 }
 

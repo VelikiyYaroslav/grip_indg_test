@@ -11,7 +11,7 @@ export function Game() {
 
     switch (gameStatus) {
         case GAME_STATUS_SELECT_BOARD_SIZE:
-            return <GameSelectBoardSize/>;
+            return <GameSelectBoardSize />;
         case GAME_STATUS_IN_GAME:
             return <GameBoard />
         case GAME_STATUS_FINISH:

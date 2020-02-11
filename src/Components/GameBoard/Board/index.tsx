@@ -1,11 +1,11 @@
-import React, { useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./index.module.scss";
 import { playerSelectCell } from "../../../Store/Game/actions";
 import { BoardCellCoords } from "../../../Store/Game/types";
 import selectGameBoard from "../../../Selectors/selectGameBoard";
 import selectGameBoardSize from "../../../Selectors/selectGameBoardSize";
-import { Cell } from './Cell';
+import { Cell } from "./Cell";
 
 export function Board() {
     const board = useSelector(selectGameBoard);

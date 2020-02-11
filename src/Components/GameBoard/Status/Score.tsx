@@ -1,8 +1,8 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import selectGameScore from '../../../Selectors/selectGameScore';
-import { getUserPointsFromGameScore } from '../../../Helpers/GetUserPointsFromGameScore';
-import selectGamePlayersCount from '../../../Selectors/selectGamePlayersCount';
+import React from "react";
+import { useSelector } from "react-redux";
+import selectGameScore from "../../../Selectors/selectGameScore";
+import { getUserPointsFromGameScore } from "../../../Helpers/GetUserPointsFromGameScore";
+import selectGamePlayersCount from "../../../Selectors/selectGamePlayersCount";
 
 export function Score() {
     const score = useSelector(selectGameScore);
@@ -16,7 +16,6 @@ export function Score() {
         ...(Array(additionalFillCount).fill(0))
     ];
 
-    // todo mb add default score (eq 0) for all users
     return (
         <div>
             {users.map((_, userNumber) => (

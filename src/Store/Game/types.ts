@@ -12,9 +12,9 @@ export const GAME_STATUS_IN_GAME = "GameStatus_InGame";
 export const GAME_STATUS_FINISH = "GameStatus_GameFinish";
 
 export type GameStatus = typeof GAME_STATUS_SELECT_BOARD_SIZE
-                            | typeof GAME_STATUS_IN_GAME
-                            | typeof GAME_STATUS_FINISH
-;
+    | typeof GAME_STATUS_IN_GAME
+    | typeof GAME_STATUS_FINISH
+    ;
 
 export interface GameState {
     gameStatus: GameStatus,
