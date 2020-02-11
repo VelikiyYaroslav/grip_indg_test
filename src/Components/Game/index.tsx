@@ -4,6 +4,7 @@ import selectGameStatus from "../../Selectors/selectGameStatus";
 import { GAME_STATUS_SELECT_BOARD_SIZE, GAME_STATUS_IN_GAME, GAME_STATUS_FINISH } from "../../Store/Game/types";
 import { GameSelectBoardSize } from "../GameSelectBoardSize";
 import { GameBoard } from "../GameBoard";
+import { GameEnd } from "../GameEnd";
 
 export function Game() {
     const gameStatus = useSelector(selectGameStatus);
@@ -14,7 +15,7 @@ export function Game() {
         case GAME_STATUS_IN_GAME:
             return <GameBoard />
         case GAME_STATUS_FINISH:
-            return (<div>{GAME_STATUS_FINISH}</div>); //TODO
+            return <GameEnd />
         default:
             // Some error here;
             return (<div>WOOPS!</div>);
