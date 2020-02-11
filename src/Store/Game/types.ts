@@ -16,10 +16,12 @@ export type GameStatus = typeof GAME_STATUS_SELECT_BOARD_SIZE
     | typeof GAME_STATUS_FINISH
     ;
 
+export type CurrentUser = number;
+
 export interface GameState {
     gameStatus: GameStatus,
     boardState: BoardState,
-    currentUser: number,
+    currentUser: CurrentUser,
 };
 
 export const SELECT_BOARD_SIZE = "SELECT_BOARD_SIZE";

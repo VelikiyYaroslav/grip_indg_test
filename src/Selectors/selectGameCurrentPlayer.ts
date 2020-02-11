@@ -1,6 +1,6 @@
 import { AppState } from "../Store";
+import { CurrentUser } from "../Store/Game/types";
 
-// todo change number to type 
-export default function (state: AppState): number {
+export default function (state: AppState): CurrentUser {
     return state.game.currentUser;
 }
