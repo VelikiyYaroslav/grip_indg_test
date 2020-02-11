@@ -6,7 +6,7 @@ import { selectBoardSize } from "../../Store/Game/actions";
 export function GameSelectBoardSize() {
 
     const [size, setSize] = useState(MIN_BOARD_SIZE)
-    const onChangeSize = useCallback((event) => setSize(event.target.value), [setSize]);
+    const onChangeSize = useCallback((event) => setSize(Number(event.target.value)), [setSize]);
 
     const dispatch = useDispatch();
     const onSelectBoardSize = useCallback(

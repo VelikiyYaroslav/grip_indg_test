@@ -1,0 +1,16 @@
+.Cell {
+    border: solid 1px #000;
+    min-width: 100px;
+    min-height: 100px;
+
+
+    &-free {
+        background: #808080;
+    }
+    &-user1 {
+        background: #00FF00;
+    }
+    &-user2 {
+        background: #FF0000;
+    }
+}
